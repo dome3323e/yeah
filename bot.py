@@ -2,10 +2,6 @@ import discord
 import requests
 import asyncio
 import os
-from dotenv import load_dotenv
-from pathlib import Path
-
-load_dotenv()
 
 DISCORD_TOKEN = os.getenv("DISCORD_TOKEN")
 COOKIE = os.getenv("ROBLOSECURITY")

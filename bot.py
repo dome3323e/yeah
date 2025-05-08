@@ -3,8 +3,9 @@ import requests
 import asyncio
 import os
 from dotenv import load_dotenv
+from pathlib import Path
 
-load_dotenv(dotenv_path="C:/Users/panit/OneDrive/python script/fund bot/data.env")
+load_dotenv(dotenv_path=Path("data.env"))
 
 DISCORD_TOKEN = os.getenv("DISCORD_TOKEN")
 COOKIE = os.getenv("ROBLOSECURITY")
@@ -50,4 +51,8 @@ async def on_ready():
                 print(f"No change: {funds} Robux")
         await asyncio.sleep(60)
 
+from keep_alive import keep_alive
+keep_alive()
+
 client.run(DISCORD_TOKEN)
+
